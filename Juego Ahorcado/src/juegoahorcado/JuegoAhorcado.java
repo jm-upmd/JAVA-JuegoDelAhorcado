@@ -182,8 +182,6 @@ public class JuegoAhorcado {
 			System.out.println("¡ENHORABUENA, has resuelto la palabra!");
 			return true;
 		} else return false;
-		
-
 	}
 	
 	/**
@@ -244,6 +242,7 @@ public class JuegoAhorcado {
 		
 	}
 
+	
 	private static void pintaHorca(int i) {
 		System.out.println(IMAGENES_AHORCADO[i]);
 		
