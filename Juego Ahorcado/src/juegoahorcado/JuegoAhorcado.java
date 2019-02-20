@@ -88,10 +88,7 @@ public class JuegoAhorcado {
 	
 	public static void main(String[] args) {
 		
-		palabraADescrubir = damePalabra();  // Palabra aleatoria de entre las existentes en PALABRAS.
-		
-		palapraEnConstruccion = new char[palabraADescrubir.length()]; // Se irán añadiendo letras coincidentes suministradas por usuario.
-		
+				
 		char letra='_'; // Caracter para representar la posicón (hueco) de las letras que aún faltan.
 		
 		sc = new Scanner(System.in);  // Objeto para leer las letras por consola.
@@ -122,7 +119,7 @@ public class JuegoAhorcado {
 			pintaHorca(contFallos); // Repinta horca según número de fallos.
 			
 			// Evalua si se ha llegado al total de fallos o se ha completado la palabra, en cuyo caso 
-			// emite el correspondiente mensaje por consola y devuelve true indicar que la partida a terminado.
+			// emite el correspondiente mensaje por consola y devuelve true para indicar que la partida a terminado.
 			// Si no se da ninguna de las condiciones anteriores devuelve false para iterar bucle y seguir pidiendo letras.
 			partidaTerminada = resultadoTirada (contFallos,aciertos);
 			
@@ -157,7 +154,7 @@ public class JuegoAhorcado {
 	}
 	
 	/**
-	 * Crea una nueva partida. Para ello  inicializa las  varibles palabra, palabraParcial, 
+	 * Crea una nueva partida. Para ello  inicializa las  varibles palabraADescrubrir, palabraEnConstruccion, 
 	 * y pinta por consola la horca inicial y el patrón con guiones bajos de la palabra a descubrir
 	 */
 	private static void nuevaPartida() {
@@ -197,7 +194,7 @@ public class JuegoAhorcado {
 	private static char pideLetra(String t) {
 		System.out.print(t);
 		sc.reset();
-		return  Character.toUpperCase(sc.next().charAt(0));
+		return  Character.toUpperCase( sc.next().charAt(0));
 		
 		
 	}
